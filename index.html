@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Café Dev ☕</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Café Dev ☕</h1>
+    <p class="slogan">"Aqui o bug é só no espresso."</p>
+  </header>
+
+  <main>
+    <section class="cardapio">
+      <h2>Cardápio de Tecnologias</h2>
+      <table>
+        <tr>
+          <th>Produto</th>
+          <th>Tecnologia</th>
+          <th>Descrição</th>
+        </tr>
+        <tr>
+          <td>HTMLuccino</td>
+          <td>HTML</td>
+          <td>É a xícara da web: estrutura tudo no site, do título aos parágrafos.</td>
+        </tr>
+        <tr>
+          <td>Latte CSS</td>
+          <td>CSS</td>
+          <td>Responsável pelo visual. Define cores, estilos e tudo que é bonito.</td>
+        </tr>
+        <tr>
+          <td>Espresso.js</td>
+          <td>JavaScript</td>
+          <td>Dinâmico e forte. Faz o site interativo e cheio de vida.</td>
+        </tr>
+        <tr>
+          <td>Chá React</td>
+          <td>React.js</td>
+          <td>Moderno e eficiente. Cria interfaces com componentes reutilizáveis.</td>
+        </tr>
+        <tr>
+          <td>Buguccino</td>
+          <td>DevTools</td>
+          <td>Doce, mas traiçoeiro. Usado para caçar e consertar bugs.</td>
+        </tr>
+        <tr>
+          <td>SQL Latte</td>
+          <td>SQL / Banco de Dados</td>
+          <td>Armazena suas informações com organização e estrutura.</td>
+        </tr>
+        <tr>
+          <td>NodeChino</td>
+          <td>Node.js</td>
+          <td>Permite rodar JavaScript no servidor. Backend saboroso!</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="pedido">
+      <h2>Faça seu Pedido</h2>
+      <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="produto">Escolha sua tecnologia favorita:</label>
+        <select id="produto" name="produto">
+          <option>HTMLuccino</option>
+          <option>Latte CSS</option>
+          <option>Espresso.js</option>
+          <option>Chá React</option>
+          <option>Buguccino</option>
+          <option>SQL Latte</option>
+          <option>NodeChino</option>
+        </select>
+
+        <label for="cafeina">Entusiasmo pela tecnologia:</label>
+        <input type="range" id="cafeina" name="cafeina" min="0" max="100" />
+
+        <label>
+          <input type="checkbox" name="notificacao" />
+          Quero receber novidades por terminal
+        </label>
+
+        <button type="submit">Fazer pedido</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Café Dev. Servindo conhecimento com café quente ☕</p>
+  </footer>
+
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nome = document.querySelector("#nome").value;
+    const produto = document.querySelector("#produto").value;
+
+    // Tempo de preparo aleatório entre 1 e 5 minutos
+    const tempo = Math.floor(Math.random() * 5) + 1;
+
+    alert(`☕ Pedido confirmado!\n\n👤 Cliente: ${nome}\n🍵 Produto: ${produto}\n⏳ Tempo de preparo: ${tempo} minuto(s)\n\nSeu pedido está sendo codificado com carinho! 💻💙`);
+
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
